@@ -24,13 +24,13 @@ Module.New("Heal Friends", function (mod)
 				local item = Container.FindItem(UHID)
 				if not item then
 					if HEAL_WITH_SIO then
-						Self.CastSpell("exura sio \"" .. player.name, 60) -- cast exura sio when no uhs found.
+						Self.CastSpell("exura gran sio \"" .. player.name, 60) -- cast exura sio when no uhs found.
 					end
 				else
 					Container.UseItemWithCreature(item.index, item.slot, item.id, player, math.random(1500, 2200)) -- use uh
 				end
 			elseif HEAL_WITH_SIO then
-				Self.CastSpell("exura sio \"" .. player.name, 60) -- cast exura sio when no uhs found.
+				Self.CastSpell("exura gran sio \"" .. player.name, 60) -- cast exura sio when no uhs found.
 			end
 			break -- end loop
 		end
